@@ -24,9 +24,7 @@ header {
   border-radius: 5px;
 }
 
-header h1 {
-  margin-bottom: 10px;
-}
+header h1 { margin-bottom: 10px; }
 
 main {
   display: flex;
@@ -36,9 +34,7 @@ main {
 }
 
 @media (min-width: 768px) {
-  main {
-    grid-template-columns: 2fr 1fr;
-  }
+  main { grid-template-columns: 2fr 1fr; }
 }
 
 section {
@@ -65,33 +61,33 @@ section h3 {
   background-color: #f9f9f9;
 }
 
-.activity-card h4 {
-  margin-bottom: 10px;
-  color: #0066cc;
+.activity-card h4 { margin-bottom: 10px; color: #0066cc; }
+.activity-card p { margin-bottom: 8px; }
+
+.participants-section {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid #e0e0e0;
 }
 
-.activity-card p {
+.participants-section h5 {
   margin-bottom: 8px;
+  color: #1a237e;
+  font-size: 0.95rem;
 }
 
-.form-group {
-  margin-bottom: 15px;
+.participant-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 5px 0;
+  border-bottom: 1px solid #eeeeee;
+  overflow-wrap: anywhere;
 }
 
-.form-group label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
-}
-
-.form-group input,
-.form-group select {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  font-size: 16px;
-}
+.participant-row:last-child { border-bottom: 0; }
+.no-participants { color: #777; font-style: italic; }
 
 button {
   background-color: #1a237e;
@@ -104,8 +100,32 @@ button {
   transition: background-color 0.2s;
 }
 
-button:hover {
-  background-color: #3949ab;
+button:hover { background-color: #3949ab; }
+button:disabled { opacity: 0.6; cursor: wait; }
+
+.unregister-button {
+  flex: 0 0 28px;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border-radius: 50%;
+  background-color: #c62828;
+  font-size: 21px;
+  line-height: 1;
+}
+
+.unregister-button:hover { background-color: #8e0000; }
+
+.form-group { margin-bottom: 15px; }
+.form-group label { display: block; margin-bottom: 5px; font-weight: bold; }
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
 }
 
 .message {
@@ -114,27 +134,10 @@ button:hover {
   border-radius: 4px;
 }
 
-.success {
-  background-color: #e8f5e9;
-  color: #2e7d32;
-  border: 1px solid #a5d6a7;
-}
-
-.error {
-  background-color: #ffebee;
-  color: #c62828;
-  border: 1px solid #ef9a9a;
-}
-
-.info {
-  background-color: #d1ecf1;
-  color: #0c5460;
-  border: 1px solid #bee5eb;
-}
-
-.hidden {
-  display: none;
-}
+.success { background-color: #e8f5e9; color: #2e7d32; border: 1px solid #a5d6a7; }
+.error { background-color: #ffebee; color: #c62828; border: 1px solid #ef9a9a; }
+.info { background-color: #d1ecf1; color: #0c5460; border: 1px solid #bee5eb; }
+.hidden { display: none; }
 
 footer {
   text-align: center;
